@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navigasi">
+            <div class="logo">
+                <h2>Web Profile</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#Education" class="dropbtn">Education</a>
+                        <div class="dropdown-content">
+                            <a href="#sd">SD</a>
+                            <a href="#smp">SMP</a>
+                            <a href="#sma">SMA</a>
+                            <a href="#pt">PT</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#Skills" class="dropbtn">Skills</a>
+                        <div class="dropdown-content">
+                            <a href="#kotlin">Kotlin</a>
+                            <a href="#flutter">Flutter</a>
+                            <a href="#laravel">Laravel</a>
+                            <a href="#javascript">Javascript</a>
+                            <a href="#reactnative">React Native</a>
+                        </div>
+                    </li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="slideshowSection">
+            <div class="slideshow-container" id="Home">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="assets/images/banner.jpg" style="width: 100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="assets/images/banner02.png" style="width: 100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="assets/images/banner03.png" style="width: 100%">
+                </div>
+                <!-- Profile Section -->
+                <aside class="profile-section">
+                    <img src="assets/images/nanda_round.png" alt="Profile Picture" width="100" height="100">
+                    <h1>Nanda Adisaputra, S.Kom.</h1>
+                    <p>Android Developer | Mobile Development Enthusiast</p>
+                </aside>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+        </section>
+
+        <button class="button" onclick="lihatCV()">Lihat CV</button>
+
+        <div class="modal" id="cvModal">
+            <div class="modal-content">
+                <span class="close" onclick="tutupModal()">&times;</span>
+                <iframe id="iframeCV" width="100%" height="500px" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+
+        <section id="educationSection">
+            <article class="box-pendidikan" id="Education">
+                <h1>Riwayat Pendidikan</h1>
+                <div class="menu">
+                    <select id="educationDropdown">
+                        <option value="all">Tampilkan Semua</option>
+                        <option value="sd">Sekolah Dasar</option>
+                        <option value="smp">Sekolah Menengah Pertama</option>
+                        <option value="sma">Sekolah Menengah Atas</option>
+                        <option value="pt">Perguruan Tinggi</option>
+                    </select>
+                </div>
+                <div class="education-boxes">
+                    <div class="box-1" id="sd">
+                        <a href="https://sekolahloka.com/data/sd-negeri-bangetayu-wetan-01/" target="_blank">
+                            <aside>
+                                <img src="assets/images/sdn_bangetayu_wetan_01.jpg" alt="SDN Bangetayu Wetan 01">
+                            </aside>
+                            <p>
+                                <h3>Sekolah Dasar</h3>
+                            </p>
+                            <p>Saya Bersekolah di SDN Bangetayu Wetan 01 Semarang (2005-2011)</p>
+                        </a>
+                    </div>
+
+                    <div class="box-2" id="smp">
+                        <a href="https://smpalhudasemarang.wordpress.com/" target="_blank">
+                            <aside>
+                                <img src="assets/images/smp_alhuda_smg.png" alt="SMP Al Huda Semarang">
+                            </aside>
+                            <p>
+                                <h3>Sekolah Menengah Pertama</h3>
+                            </p>
+                            <p>Saya Bersekolah di SMP Al Huda Semarang (2011-2014)</p>
+                        </a>
+                    </div>
+
+                    <div class="box-3" id="sma">
+                        <a href="https://sman10-semarang.sch.id/" target="_blank">
+                            <aside>
+                                <img src="assets/images/sma_negeri_10_semarang.jpg" alt="SMA Negeri 10 Semarang">
+                            </aside>
+                            <p>
+                                <h3>Sekolah Menengah Atas</h3>
+                            </p>
+                            <p>Saya Bersekolah di SMA Negeri 10 Semarang (2014-2017)</p>
+                        </a>
+                    </div>
+
+                    <div class="box-4" id="pt">
+                        <a href="https://usm.ac.id/id/" target="_blank">
+                            <aside>
+                                <img src="assets/images/usm.png" alt="Universitas Semarang">
+                            </aside>
+                            <p>
+                                <h3>Perguruan Tinggi</h3>
+                            </p>
+                            <p>Saya Kuliah di Universitas Semarang (2017-2021)</p>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="skillsSection">
+            <article class="box-skill" id="Skills">
+                <h1>Skills</h1>
+                <div class="menu">
+                    <select id="skillDropdown">
+                        <option value="all">Tampilkan Semua</option>
+                        <option value="kotlin">Kotlin</option>
+                        <option value="flutter">Flutter</option>
+                        <option value="laravel">Laravel</option>
+                        <option value="javascript">Javascript</option>
+                        <option value="reactnative">React Native</option>
+                    </select>
+                </div>
+                <div class="skill-boxes">
+                    <div class="box-a" id="kotlin">
+                        <a href="https://kotlinlang.org/docs/getting-started.html" target="_blank">
+                            <aside>
+                                <img src="assets/images/kotlin.png" alt="Kotlin Development">
+                            </aside>
+                            <p>
+                                <h3>Kotlin Development</h3>
+                            </p>
+                            <p>salah satu bahasa pemrograman yang bersifat open-source, yang mendukung fitur pemrograman
+                                berbasis objek (object-oriented programming) dan pemrograman fungsional (functional
+                                programming).</p>
+                        </a>
+                    </div>
+
+                    <div class="box-b" id="flutter">
+                        <a href="https://flutter.dev/" target="_blank">
+                            <aside>
+                                <img src="assets/images/flutter.png" alt="Flutter Development">
+                            </aside>
+                            <p>
+                                <h3>Flutter Development</h3>
+                            </p>
+                            <p> framework open source yang dapat digunakan untuk mengembangkan aplikasi multiplatform,
+                                seperti
+                                Android, web, iOS, Windows, MacOS, Linux, hingga Fuchsia.</p>
+                        </a>
+                    </div>
+
+                    <div class="box-c" id="laravel">
+                        <a href="https://laravel.com/" target="_blank">
+                            <aside>
+                                <img src="assets/images/laravel.png" alt="Laravel Development">
+                            </aside>
+                            <p>
+                                <h3>Laravel Development</h3>
+                            </p>
+                            <p> framework PHP yang open-source dan berisi banyak modul dasar untuk mengoptimalkan
+                                kinerja
+                                PHP
+                                dalam pengembangan aplikasi web</p>
+                        </a>
+                    </div>
+                    <div class="box-d" id="javascript">
+                        <a href="https://www.javascript.com/" target="_blank">
+                            <aside>
+                                <img src="assets/images/javascript.png" alt="Javascript Development">
+                            </aside>
+                            <p>
+                                <h3>Javascript Development</h3>
+                            </p>
+                            <p> bahasa pemrograman yang digunakan dalam pengembangan website agar lebih dinamis dan
+                                interaktif.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="box-e" id="reactnative">
+                        <a href="https://reactnative.dev/" target="_blank">
+                            <aside>
+                                <img src="assets/images/reactnative.png" alt="React Native Development">
+                            </aside>
+                            <p>
+                                <h3>React Native Development</h3>
+                            </p>
+                            <p>sebuah framework berbasis JavaScript yang digunakan untuk mengembangkan aplikasi mobile
+                                di
+                                dua
+                                sistem operasi secara bersamaan, yaitu Android dan iOS.</p>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="contactSection">
+            <article class="box-kontak" id="Contact">
+                <h1>Hubungi Saya</h1>
+                <div class="kontak-boxes" id="contactBoxes">
+                    <div class="kontak-1">
+
+                    </div>
+                    <div class="kontak-2">
+
+                    </div>
+                    <div class="kontak-3">
+
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <h2><span></span></h2>
+        <p>&copy; 2024 Nanda Adisaputra. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
